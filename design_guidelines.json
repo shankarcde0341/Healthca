@@ -1,0 +1,140 @@
+{
+  "theme": "LIGHT",
+  "archetype": "Swiss & High-Contrast (Premium SaaS)",
+  "brand_name": "Healthca",
+  "colors": {
+    "primary": "#4F46E5",
+    "secondary": "#2563EB",
+    "accent": "#8B5CF6",
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "text_primary": "#0F172A",
+    "text_secondary": "#475569",
+    "border": "#E2E8F0"
+  },
+  "typography": {
+    "heading_font": "Plus Jakarta Sans",
+    "body_font": "Inter",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl font-bold tracking-tight text-[#0F172A]",
+      "h2": "text-3xl sm:text-4xl font-bold tracking-tight text-[#0F172A]",
+      "h3": "text-xl sm:text-2xl font-semibold text-[#0F172A]",
+      "body": "text-base text-[#475569] leading-relaxed",
+      "label": "text-sm font-medium text-[#475569] uppercase tracking-wider"
+    }
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-24 sm:py-32",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "border_radius": "rounded-[24px]",
+    "button_radius": "rounded-full",
+    "glassmorphism": "bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)]",
+    "card_shadow": "shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(79,70,229,0.1)] transition-shadow duration-300"
+  },
+  "sections": [
+    {
+      "name": "Navbar",
+      "description": "Sticky glass navbar (logo left, menu center, CTA right, blur on scroll). Use crystal glass styling."
+    },
+    {
+      "name": "Hero",
+      "description": "Split layout. Left: badge, large 2-3 line heading, description, primary+secondary CTA, emergency badge, opening hours card. Right: large doctor image with floating glass cards (Happy Patients, Online Consultation, Emergency, Rating, Experience). Soft blue gradient background with abstract medical shapes."
+    },
+    {
+      "name": "Services",
+      "description": "Responsive 3-column grid with cards (image, icon, title, description, Learn More). Hover: lift, image zoom, shadow, gradient border, arrow slide."
+    },
+    {
+      "name": "About",
+      "description": "Two columns. Large healthcare image + floating info card overlapping. Right: headline, description, 3 animated stat cards, CTA. Counter animation on scroll."
+    },
+    {
+      "name": "Features",
+      "description": "Modern Bento Grid Layout, glass hover, subtle gradients."
+    },
+    {
+      "name": "Doctors",
+      "description": "Modern team cards, rounded images, hover overlay reveals social icons, image zoom."
+    },
+    {
+      "name": "Testimonials",
+      "description": "Auto scrolling infinite slider, glass cards, 5-star rating."
+    },
+    {
+      "name": "Appointment Form",
+      "description": "Modern glass card, rounded inputs, floating labels, beautiful submit button, doctor illustration."
+    },
+    {
+      "name": "FAQ",
+      "description": "Accordion with smooth expand."
+    },
+    {
+      "name": "Footer",
+      "description": "Dark premium footer with newsletter, quick links, social, contact, large spacing. Dark background contrasting the rest of the light page."
+    }
+  ],
+  "image_urls": {
+    "hero_doctor": "https://images.pexels.com/photos/37476745/pexels-photo-37476745.jpeg",
+    "about_image": "https://images.pexels.com/photos/31499386/pexels-photo-31499386.jpeg",
+    "services": [
+      {
+        "url": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7",
+        "alt": "Cardiology"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528",
+        "alt": "Diagnostics"
+      },
+      {
+        "url": "https://images.pexels.com/photos/5207102/pexels-photo-5207102.jpeg",
+        "alt": "General Checkup"
+      },
+      {
+        "url": "https://images.pexels.com/photos/7108396/pexels-photo-7108396.jpeg",
+        "alt": "Pediatrics"
+      },
+      {
+        "url": "https://images.pexels.com/photos/5827294/pexels-photo-5827294.jpeg",
+        "alt": "Laboratory"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b",
+        "alt": "Consultation"
+      }
+    ],
+    "doctors": [
+      {
+        "url": "https://images.pexels.com/photos/35174996/pexels-photo-35174996.jpeg",
+        "name": "Dr. Smith"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1659353888906-adb3e0041693",
+        "name": "Dr. Jane"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1638202993928-7267aad84c31",
+        "name": "Dr. Emily"
+      }
+    ],
+    "form_illustration": "https://images.pexels.com/photos/37476745/pexels-photo-37476745.jpeg"
+  },
+  "components_to_use": [
+    "Shadcn Accordion for FAQ",
+    "Shadcn Input, Form, Select, and Button for Appointment Form and Newsletter",
+    "Framer Motion for scroll animations, hover states, bento grid reveals, and floating glass cards in hero",
+    "React Fast Marquee for infinite scrolling testimonials",
+    "Lucide React for icons"
+  ],
+  "instructions_to_main_agent": [
+    "Do NOT use a standard medical template look. The site MUST feel like a high-end Stripe/Vercel/Linear SaaS product, integrating clean design with elegant healthcare branding.",
+    "Use EXACTLY these colors: Primary #4F46E5, Secondary #2563EB, Accent #8B5CF6, Background #F8FAFC, Surface #FFFFFF, Text #0F172A, Border #E2E8F0.",
+    "Apply 'rounded-[24px]' to major cards, sections, and images to meet the user's specific 20-24px requirement.",
+    "Implement premium glassmorphism using 'bg-white/70 backdrop-blur-xl border border-white/40' for floating cards in the hero and the sticky navbar.",
+    "Use layered soft shadows: e.g. 'shadow-[0_8px_30px_rgb(0,0,0,0.04)]'. Add dynamic hover states 'hover:shadow-[0_20px_40px_rgb(79,70,229,0.1)]'.",
+    "Create premium blue gradients using the Primary (#4F46E5) and Secondary (#2563EB) colors for hero backgrounds, CTA buttons, and subtle bento bgs.",
+    "Typography: Use 'font-sans' with Plus Jakarta Sans for headings (tight tracking, large sizes) and Inter for readable body text.",
+    "Ensure ALL interactive elements (buttons, inputs, links, accordions) contain a `data-testid` attribute based on their functional role.",
+    "Bento Features grid: Utilize col-span-1 and col-span-2 asymmetrical spans. Use 'h-full' to ensure cards match height and there are no jagged bottoms.",
+    "For the Appointment Form and Newsletter sections, ensure standard form management that saves data appropriately (e.g. backend api routes / MongoDB integration)."
+  ]
+}

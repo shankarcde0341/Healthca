@@ -1,0 +1,29 @@
+{
+  "summary": "Backend (8/8) and Frontend (all key flows) tested successfully for Healthca landing page. Backend endpoints all pass: GET /api/, POST/GET /api/appointments (200 + 422 for invalid email), POST /api/newsletter (200 + 409 dup + 422 invalid), and existing /api/status. Frontend loads with hero heading 'Modern Healthcare', all 5 floating stat cards, sticky navbar, 6 service cards, About section, FAQ accordion expansion, appointment form (submits successfully, POST /api/appointments returns 200, success toast 'Appointment requested!', form cleared), newsletter (subscribe toast + duplicate 'You're already subscribed' toast), and no horizontal overflow at 1440/768/375 widths.",
+  "tested_scope": ["backend", "frontend", "integration"],
+  "passed": [
+    "GET /api/ returns {message: 'Healthca API'}",
+    "POST /api/appointments with valid payload -> 200 + id + created_at",
+    "POST /api/appointments with invalid email -> 422",
+    "GET /api/appointments returns list including created appointment (no _id)",
+    "POST /api/newsletter with new email -> 200 + id",
+    "POST /api/newsletter duplicate email -> 409",
+    "POST /api/newsletter invalid email -> 422",
+    "POST/GET /api/status still working",
+    "Landing page loads at REACT_APP_BACKEND_URL, no console errors (only expected 409 network log during dup test)",
+    "Hero heading contains 'Modern Healthcare'; all 5 hero-card-* (patients/online/rating/emergency/experience) visible",
+    "Navbar visible; sticky behavior on scroll functional",
+    "Services section renders exactly 6 service cards",
+    "About section visible",
+    "FAQ accordion (faq-item-0) click expands",
+    "Appointment form submission -> POST /api/appointments 200, success toast 'Appointment requested! We\\'ll be in touch shortly.', form cleared",
+    "Newsletter subscribe -> 'Subscribed!' toast; duplicate submit -> 'You're already subscribed.' toast",
+    "No horizontal overflow at 1440, 768, 375 viewport widths"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": "Department field is a native <select> element; Playwright must use select_option(value=...) rather than click. This is not a bug - the UI works normally for real users. Counter animation (About) and hover effects on service cards were not asserted programmatically but sections render correctly. Testimonials auto-scroll and Doctors sections rendered based on page structure but not explicitly asserted."
+}
